@@ -61,7 +61,6 @@ namespace skl
 			}
 
 			ss << boneAddedCount;
-
 			actualName = ss.str();
 		}
 
@@ -76,11 +75,8 @@ namespace skl
 			actualName += "_1";
 		}
 
-
 		bones[actualName] = parent->add(x,y,angle,length,minAngle,maxAngle,actualName);
 		return bones[actualName];
-
-
 	}
 
 	bool Skeleton::remove( Bone* bone )
@@ -220,7 +216,6 @@ namespace skl
 		ss << std::endl;
 		file << ss.str().c_str();
 
-
 		for (std::map<std::string,Bone*>::const_iterator it = bones.begin();
 			it != bones.end(); ++it)
 		{
@@ -278,18 +273,15 @@ namespace skl
 
 			ss << std::endl;
 			file << ss.str().c_str();
-
 		}
 
 		file.close();
-
 		return true;
 	}
 
 	int Skeleton::findLevel( const Bone* bone ) const
 	{
 		int level = 0;
-
 
 		while(bone->getParent())
 		{
@@ -416,7 +408,6 @@ namespace skl
 		for( std::vector<std::pair<int,std::string*> >::iterator it = sortedList.begin();
 			it != sortedList.end(); ++it)
 		{
-
 			sscanf(it->second->c_str(),"%d %f %f %f %f %f %f %d %d \" %[^\"] \" \" %[^\"]",
 				&level, &x, &y, &angle, &length, &minAngle, &maxAngle, &relative, &fixture, name,parentName);
 
@@ -432,7 +423,6 @@ namespace skl
 			{
 				parent = getByName(parentName);
 			}
-			
 
 			if(parent)
 			{
@@ -483,11 +473,8 @@ namespace skl
 			actualName += "_1";
 		}
 
-	
 		bone->setName(actualName);
 		bones[bone->getName()] = bone;
-
-
 	}
 
 	void Skeleton::renameBone( Bone* bone, const std::string& newName )
@@ -508,8 +495,6 @@ namespace skl
 	{
 		_processAnimation(&root);
 	}
-
-
 }
 
 

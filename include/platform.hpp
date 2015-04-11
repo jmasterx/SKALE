@@ -39,6 +39,5 @@ namespace skl
 	#ifndef SK_TWO_PI
 	#define SK_TWO_PI 6.283185307179586476925286766559f
 	#endif
-
 }
 #endif

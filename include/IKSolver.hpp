@@ -57,7 +57,6 @@ namespace skl
 		bool solveIteration(Bone* targetBone, float targetX, float targetY) const;
 		bool solve(Skeleton* skeleton,Bone* targetBone, float targetX, float targetY);
 		bool solve(Skeleton* skeleton,const std::string& boneName, float targetX, float targetY);
-
 		virtual ~IKSolver(void);
 	};
 }

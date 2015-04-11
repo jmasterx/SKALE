@@ -51,7 +51,6 @@ namespace skl
 		std::list<Bone> children;
 		std::vector<KeyFrame> mKeyFrames;
 		bool mFixture;
-
 		float mFrameX;
 		float mFrameY;
 		float mFrameAngle;
@@ -98,16 +97,12 @@ namespace skl
 		const float& getFrameX() const;
 		const float& getFrameY() const;
 		const float& getFrameAngle() const;
-
 		void setAsFixture(bool fixture);
 		bool isFixture() const;
-
-
 		void addKeyFrame(const KeyFrame& keyFrame);
 		void addKeyFrames(const std::vector<KeyFrame>& keyFrames);
 		void resetAnimation();
 		void processAnimation();
-		
 		virtual ~Bone(void);
 	};
 }

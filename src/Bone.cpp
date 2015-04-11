@@ -259,17 +259,15 @@ namespace skl
 			}
 			else
 			{
-					curIncreaseAngle = (endKeyFrame->getValue() - 
-						startKeyFrame->getValue()) / remainingInterpolationFrames;
+				curIncreaseAngle = (endKeyFrame->getValue() - 
+					startKeyFrame->getValue()) / remainingInterpolationFrames;
 			}
-			
 		}
 		else
 		{
 			remainingInterpolationFrames = -1;
 			curIncreaseAngle = 0.0f;
 		}
-	
 	}
 
 	void Bone::resetAnimation()
@@ -328,7 +326,6 @@ namespace skl
 				endKeyFrame = NULL;
 			}
 		}
-
 		currentFrame++;
 	}
 
